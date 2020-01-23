@@ -16,5 +16,40 @@ namespace Inventory_managemenet_system
         {
             InitializeComponent();
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.SetVisibleCore(false);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HOME_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void seller_Click(object sender, EventArgs e)
+        {
+            sellerlogin s = new sellerlogin();
+            s.Show();
+            this.SetVisibleCore(false);
+        }
+
+        private void customer_Click(object sender, EventArgs e)
+        {
+            customer c = new customer();
+            c.Show();
+            this.SetVisibleCore(false);
+                 
+        }
     }
 }

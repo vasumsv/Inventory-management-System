@@ -8,3 +8,8 @@ G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemen
 G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.csproj.CoreCompileInputs.cache
 G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.exe
 G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.pdb
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.customer.resources
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.category.resources
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.payment.resources
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.Sellercontrol.resources
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.sellerlogin.resources
