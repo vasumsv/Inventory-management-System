@@ -1,0 +1,10 @@
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\bin\Debug\Inventory managemenet system.exe.config
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\bin\Debug\Inventory managemenet system.exe
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\bin\Debug\Inventory managemenet system.pdb
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.csprojAssemblyReference.cache
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.Form1.resources
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory_managemenet_system.Properties.Resources.resources
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.csproj.GenerateResource.cache
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.csproj.CoreCompileInputs.cache
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.exe
+G:\visual projects\Bcom project\Inventory managemenet system\Inventory managemenet system\obj\Debug\Inventory managemenet system.pdb
