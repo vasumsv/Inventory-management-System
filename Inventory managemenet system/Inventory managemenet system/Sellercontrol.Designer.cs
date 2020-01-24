@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.back = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
@@ -42,19 +43,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.HOMEcustomer = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.dataGridView3);
             this.panel2.Controls.Add(this.back);
             this.panel2.Controls.Add(this.save);
@@ -68,11 +72,18 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(12, 102);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1023, 593);
             this.panel2.TabIndex = 9;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(380, 269);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(216, 32);
+            this.richTextBox1.TabIndex = 36;
+            this.richTextBox1.Text = "";
             // 
             // dataGridView3
             // 
@@ -83,12 +94,13 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(488, 129);
             this.dataGridView3.TabIndex = 35;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // back
             // 
             this.back.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.ForeColor = System.Drawing.Color.Maroon;
-            this.back.Location = new System.Drawing.Point(192, 374);
+            this.back.Location = new System.Drawing.Point(212, 350);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(111, 34);
             this.back.TabIndex = 34;
@@ -100,7 +112,7 @@
             // 
             this.save.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save.ForeColor = System.Drawing.Color.Maroon;
-            this.save.Location = new System.Drawing.Point(419, 374);
+            this.save.Location = new System.Drawing.Point(418, 350);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(111, 34);
             this.save.TabIndex = 33;
@@ -118,6 +130,7 @@
             this.delete.TabIndex = 32;
             this.delete.Text = "DELETE";
             this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // update
             // 
@@ -129,14 +142,20 @@
             this.update.TabIndex = 30;
             this.update.Text = "UPDATE";
             this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "select",
+            "Laptop",
+            "Mobile"});
             this.comboBox1.Location = new System.Drawing.Point(384, 197);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(212, 24);
             this.comboBox1.TabIndex = 29;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // richTextBox3
             // 
@@ -163,6 +182,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(488, 129);
             this.dataGridView2.TabIndex = 26;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label5
             // 
@@ -204,16 +224,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Component Price";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(384, 261);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(212, 33);
-            this.dataGridView1.TabIndex = 17;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleGreen;
@@ -227,11 +237,31 @@
             // 
             this.HOMEcustomer.AutoSize = true;
             this.HOMEcustomer.Font = new System.Drawing.Font("Times New Roman", 31.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HOMEcustomer.Location = new System.Drawing.Point(190, 23);
+            this.HOMEcustomer.Location = new System.Drawing.Point(216, 24);
             this.HOMEcustomer.Name = "HOMEcustomer";
             this.HOMEcustomer.Size = new System.Drawing.Size(486, 61);
             this.HOMEcustomer.TabIndex = 0;
             this.HOMEcustomer.Text = "SELLER CONTROL";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(168, 411);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 33);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Category table1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(632, 411);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(195, 33);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Category table2";
             // 
             // Sellercontrol
             // 
@@ -246,7 +276,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -261,7 +290,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label HOMEcustomer;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -272,5 +300,8 @@
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button update;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
     }
 }
