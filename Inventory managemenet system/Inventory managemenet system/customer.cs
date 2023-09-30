@@ -39,6 +39,7 @@ namespace Inventory_managemenet_system
                 SqlCommand cmd = new SqlCommand(" INSERT INTO customer (Id,customer_name,address,phone_number) values ( '" + textBox1.Text.ToString().Trim().Replace("'", "''") + "','" + textBox2.Text.ToString().Trim().Replace("'", "''") + "','" + richTextBox1.Text.ToString().Trim().Replace("'", "''") + "','" + textBox3.Text.ToString().Trim().Replace("'", "''") + "')", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved","Customer Details");
+                  MessageBox.Show("Data Saved","Customer data has been added ");
                 con.Close();
 
                 textBox1.Text = "";
@@ -51,7 +52,7 @@ namespace Inventory_managemenet_system
             }
             catch (Exception)
             {
-                MessageBox.Show("try agiain or check the Id");
+                MessageBox.Show("try agiain or check the Id or contact the Application owner");
             }
         }
         private void customertable()
@@ -59,7 +60,8 @@ namespace Inventory_managemenet_system
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from customer", con);
+                String query = "select * from customer";
+                SqlCommand cmd = new SqlCommand(query, con);
                 cmd.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
